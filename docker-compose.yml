@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  redis:
+    image: redis:5.0.7-alpine
+    container_name: "playground_redis"
+    volumes:
+      - .redis:/data
+    ports:
+      - 6379:6379
+    command: ["redis-server", "--appendonly", "yes"]
+
