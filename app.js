@@ -23,6 +23,7 @@ const { UI } = require('bull-board');
 app.use('/admin/queues', UI);
 
 app.use('/', indexRouter);
+app.use('/queues', require('./routes/queue'));
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
